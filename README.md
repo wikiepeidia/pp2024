@@ -20,3 +20,4 @@ How to USE git commands
 * git config --global user.email "EMAIL"
 * git commit -m "messages"
 * git push origin main
+* to delete files, run del file and git add -u, commit and push
