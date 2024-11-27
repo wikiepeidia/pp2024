@@ -12,3 +12,11 @@ Student Info
 * Student Name: Pham The Minh 
 * Student ID: 23BI14279
 
+How to USE git commands
+========================
+* git clone link 
+* git add file to check changes
+* git config --global user.name "USERNAME"
+* git config --global user.email "EMAIL"
+* git commit -m "messages"
+* git push origin main
