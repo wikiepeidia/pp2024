@@ -15,7 +15,7 @@ Student Info
 How to USE git commands
 ========================
 * git clone link 
-* git add file to check changes
+* git add * file to check changes/startup of vscode
 * git config --global user.name "USERNAME"
 * git config --global user.email "EMAIL"
 * git commit -m "messages"
