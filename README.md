@@ -1,4 +1,4 @@
-USTH ICT 2024 Advanced Programming with Python
+USTH ICT 2024 Advanced Programming with Python COURSE
 =====================================================
 
 Students are expected to:
@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: USTH ICT1 
-* Student ID: Not-Vietnamese
+* Student Name: Pham The Minh 
+* Student ID: 23BI14279
 
