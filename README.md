@@ -15,9 +15,10 @@ Student Info
 How to USE git commands
 ========================
 * git clone link 
-* git add * file to check changes/startup of vscode
+* git add * file to publish
 * git config --global user.name "USERNAME"
 * git config --global user.email "EMAIL"
 * git commit -m "messages"
 * git push origin main
 * to delete files, run del file and git add -u, commit and push
+* **run** git pull when startup vscode
