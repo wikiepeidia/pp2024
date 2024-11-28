@@ -2,7 +2,12 @@ def studentinfo():
     student=[]
     numstdnt=int(input("Enter number of student: "))
     for _ in range(numstdnt):
-        stdntid=int(input("Enter student id: "))
+        while True:
+            try:
+                stdntid=int(input("Enter student id: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter an integer for student id.")
         name=input("Enter student name: ")
         dob=input("Enter student date of birth: ")
         student.append({"id":stdntid,"name":name,"dob":dob})
