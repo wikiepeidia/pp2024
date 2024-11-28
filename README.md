@@ -22,3 +22,4 @@ How to USE git commands
 * git push origin main
 * to delete files, run del file and git add -u, commit and push
 * **run** git pull when startup vscode
+* to rename file only run git mv oldfile newfile
