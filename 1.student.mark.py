@@ -12,7 +12,12 @@ def coruseinfo():
     course=[]
     numcourse=int(input("Enter number of course: "))
     for _ in range(numcourse):
-        courseid=int(input("Enter course id: "))
+        while True:
+            try:
+                courseid = int(input("Enter course id: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter an integer for course id.")
         coursename=input("Enter course name: ")
         course.append({"id":courseid,"name":coursename})
     return course
@@ -22,7 +27,12 @@ def markforcouse(student,course):
     mark=[]
     for i in student:
         for j in course:
-            mark.append({"student":i,"course":j,"mark":int(input(f"Enter mark for student {i['name']} in course {j['name']}: "))})
+            while True:
+                try:
+                    mark.append({"student":i,"course":j,"mark":int(input(f"Enter mark for student {i['name']} in course {j['name']}: "))})
+                    break
+                except ValueError:
+                    print("Invalid input. Please enter an integer for mark.")
     return mark
 
 def courselist(course):
