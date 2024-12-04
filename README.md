@@ -23,10 +23,6 @@ Students are expected to:
 * **run** `git pull` when startup vscode
 * to rename file only run `git mv {oldfile} {newfile}`
 
-# Table of contents
-- [USTH ICT 2024 Advanced Programming with Python COURSE](#usth-ict-2024-advanced-programming-with-python-course)
-- [Student Info](#student-info)
-- [How to USE git commands](#how-to-use-git-commands)
-  - [SETUP git:](#setup-git)
-  - [Basics:](#basics)
-- [Table of contents](#table-of-contents)
+## Install in linux:
+* install git credential manager https://github.com/git-ecosystem/git-credential-manager/releases
+* configuration `git config --global credential.helper manager`
