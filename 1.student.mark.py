@@ -1,3 +1,8 @@
+'''
+recommendation: use IF-ELSE: detect student whether exist, couse whether exist,etc. Do a huge while loop.
+can use: https://github.com/LezardValeth97/pp2024
+'''
+
 def studentinfo():
     student=[]
     numstdnt=int(input("Enter number of student: "))
