@@ -1,4 +1,4 @@
-import math
+import numpy as np
 from .student import Student
 from .course import Course
 from .mark import Mark
@@ -7,28 +7,22 @@ class School:
     def __init__(self):
         self.students = []
         self.courses = []
-        self.marks = []
-
-    def add_student(self, student):
-        self.students.append(student)
-
-    def add_course(self, course):
-        self.courses.append(course)
-
-    def add_mark(self, mark):
-        self.marks.append(mark)
+        self.marks = []  # List of Mark objects
+        self.marks_array = None
+        self.credits_array = None
 
     def calculate_gpa(self):
-        for student in self.students:
-            total_credits = 0
-            total_weighted_marks = 0
-            for mark in self.marks:
-                if mark.student_id == student.id:
-                    course = next(course for course in self.courses if course.id == mark.course_id)
-                    total_credits += course.credit
-                    total_weighted_marks += mark.mark * course.credit
-            if total_credits > 0:
-                student.gpa = total_weighted_marks / total_credits
+        if self.marks_array is None or self.credits_array is None:
+            print("Marks or credits data is missing.")
+            return
+
+        weighted_marks = self.marks_array.T @ self.credits_array
+        total_credits = np.sum(self.credits_array)
+        gpas = weighted_marks / total_credits
+
+        for student, gpa in zip(self.students, gpas):
+            student.gpa = gpa
 
     def sort_students_by_gpa(self):
-        self.students.sort(key=lambda student: student.gpa, reverse=True)
+        sorted_indices = np.argsort([-student.gpa for student in self.students])
+        self.students = [self.students[i] for i in sorted_indices]

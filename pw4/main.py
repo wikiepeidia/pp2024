@@ -1,28 +1,19 @@
-import curses
 from domains.school import School
-import input as inp
-import output as out
+import input
+import output
 
-def curses_main(stdscr):
+def main():
     school = School()
-    stdscr.clear()
-    stdscr.addstr(0, 0, "Welcome to the School Management System")
-    stdscr.refresh()
-    curses.napms(2000)
-    stdscr.clear()
 
-    inp.input_student_info(stdscr, school)
-    inp.input_course_info(stdscr, school)
-    inp.input_marks(stdscr, school)
+    input.input_students(school)
+    input.input_courses(school)
+    input.input_marks(school)
+
     school.calculate_gpa()
     school.sort_students_by_gpa()
-    out.list_students(stdscr, school)
-    out.list_courses(stdscr, school)
-    out.show_student_marks(stdscr, school)
 
-    stdscr.addstr(0, 0, "Press any key to exit...")
-    stdscr.refresh()
-    stdscr.getch()
+    output.list_students(school)
+    output.list_courses(school)
 
 if __name__ == "__main__":
-    curses.wrapper(curses_main)
+    main()
