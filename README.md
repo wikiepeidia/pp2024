@@ -26,3 +26,5 @@ Students are expected to:
 ## Install in linux:
 * install git credential manager https://github.com/git-ecosystem/git-credential-manager/releases
 * configuration `git config --global credential.helper manager`
+### Troubleshooting:
+* 
