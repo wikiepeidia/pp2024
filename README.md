@@ -27,4 +27,5 @@ Students are expected to:
 * install git credential manager https://github.com/git-ecosystem/git-credential-manager/releases
 * configuration `git config --global credential.helper manager`
 ### Troubleshooting:
-* 
+### Other ways:
+* can run in VSCODE's terminal without git credential manager
