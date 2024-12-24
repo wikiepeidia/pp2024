@@ -8,14 +8,12 @@ import numpy as np
 import input as inp_module
 import output
 
-# Ensure the pw5 folder exists
-BASE_DIR = "pw5"
+# Ensure the pw6 folder exists
+BASE_DIR = "pw6"
 os.makedirs(BASE_DIR, exist_ok=True)
 
-
-
 def compress_files():
-    """Compress students.txt, courses.txt, and marks.txt into pw5/students.dat."""
+    """Compress students.txt, courses.txt, and marks.txt into pw6/students.dat."""
     filepath = os.path.join(BASE_DIR, "students.dat")
     with zipfile.ZipFile(filepath, "w") as zipf:
         for filename in ["students.txt", "courses.txt", "marks.txt"]:
@@ -24,7 +22,7 @@ def compress_files():
                 zipf.write(file_to_zip, os.path.basename(file_to_zip))
 
 def decompress_files():
-    """Decompress pw5/students.dat and extract its content into pw5."""
+    """Decompress pw6/students.dat and extract its content into pw6."""
     filepath = os.path.join(BASE_DIR, "students.dat")
     if os.path.exists(filepath):
         with zipfile.ZipFile(filepath, "r") as zipf:
@@ -88,6 +86,8 @@ def main():
         else:
             print("Invalid choice. Exiting.")
             return
+    else:
+        print("'students.dat' was not found.")
 
     # Input new data if necessary
     inp_module.input_students(school)

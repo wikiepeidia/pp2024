@@ -88,7 +88,8 @@ def main():
         else:
             print("Invalid choice. Exiting.")
             return
-
+    else:
+        print("'students.dat' was not found.")
     # Input new data if necessary
     inp_module.input_students(school)
     inp_module.input_courses(school)
